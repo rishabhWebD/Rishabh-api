@@ -1,38 +1,58 @@
-.App {
+/* @import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap'); */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #1a1a1d;
+  /* background-image: url(./components/bg.jpeg);
+  background-repeat: repeat-y; */
+  position:relative;
+  z-index: 0;
+  height:600px;
+  overflow-y:scroll;
+}
+.mr{
+  margin-left: auto;
+}
+.home{
+  display: inline;
+}
+.main{
+  height: 8vh;
+  display:block;
   text-align: center;
+  position:relative;
+  top: 0;
+  z-index: 1;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  /* padding-right: 10px; */
+  margin-right:10px;
+  border: 2px solid white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none;
+  color: #c3073f;
+  font-family: 'Akronim', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Zilla Slab', serif;
+font-weight: 700;
+text-shadow: 1px 1px 0.5px rgb(255, 255, 255);
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover{
+  color: rgb(255, 255, 255);
+  /* font-size: xx-large; */
+}
+.sel_dog{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  width: 90vw;
 
-.App-link {
-  color: #61dafb;
+  flex-wrap: wrap;
+  margin-left: 23px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sel{
+  margin: 5px;
+  margin-left: 160px;
 }

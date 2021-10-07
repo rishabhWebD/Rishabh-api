@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Dog from './components/Dog';
+import {Switch,Route} from 'react-router-dom';
+import Select from './components/Select'
+ 
+import Nav from './components/Nav'
+import Random from './components/Random';
+import { useState } from 'react';
 
 function App() {
+  const [choose,setChoose]=useState('african')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Nav/>
+      <Switch>
+        <Route exact path='/'>
+          <Dog setChoose={setChoose}/>
+        </Route>
+        <Route exact path='/random'>
+           <Select choose={choose}/>
+        </Route>
+        <Route exact path='/breed' component={Random}/>
+      </Switch>
     </div>
   );
 }
